@@ -1,0 +1,31 @@
+@import "../Variables.scss";
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+
+    ul{
+        @include byebyeMargin;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 0.5rem;
+
+        li{
+            list-style: none;
+
+            &:nth-of-type(2){
+                justify-self: end;
+            }
+
+            .link{
+                text-decoration: none;
+                color: $secondaryColor;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

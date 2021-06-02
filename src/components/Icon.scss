@@ -1,0 +1,13 @@
+@import "../Variables.scss";
+
+.icon{
+    width: auto;
+    height: auto;
+    
+    &__icon{
+        @include byebyeMargin;
+        max-width: 3rem;
+        height: auto;
+
+    }
+}

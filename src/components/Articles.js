@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import {Link} from "@reach/router";
 import DownArrow from "./DownArrow";
+import Menu from "./Menu";
 
 export default function Articles(){
     var [content, setContent] = useState([]);
@@ -12,12 +13,13 @@ export default function Articles(){
             axios.get("http://localhost:1337/Articels") /* yeah i know there is a spelling error, i cant change it in the backend for some reason */
                 .then(function(response){
                     setContent(response.data);
-                    console.log(response.data)
+                    /* console.log(response.data) */
                 })
             }, [setContent]);
             
     return(
         <main className="articles">
+            <Menu />
             <DownArrow />
 
             {content.map(function(cunt){
