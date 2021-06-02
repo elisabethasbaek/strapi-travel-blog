@@ -1,0 +1,71 @@
+@import "../Variables.scss";
+
+.articles{
+    @include byebyeMargin;
+
+    .downArrow{
+        
+    }
+    
+    .oneArticle{
+        display: grid;
+        /* SCROLL SNAP NO WORK Y??? */
+
+        &__image{
+            grid-area: 1/1/-1/-1;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            margin: 0 auto;
+            @include byebyeMargin;
+
+            &--one{
+               width: 20vw;
+               justify-self: start;
+               object-position: 100% 0%;
+            }
+            
+            &--two{
+                width: 20vw;
+                justify-self: end;
+                object-position: 0% 100%;
+            }
+            
+            &--three{
+                width: 70vw;
+                margin: 0 auto;
+                box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.5);
+            }
+        }
+
+        &__text{
+            grid-area: 1/1/-1/-1;
+            place-self: center;
+            padding-bottom: 4rem;
+            max-width: 65vw;
+            text-align: center;
+            color: $secondaryColor;
+
+            .date{
+                @include byebyeMargin;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+    
+            .heading{
+                place-self: center;
+                @include byebyeMargin;
+    
+                &__link{
+                    text-decoration: none;
+                    color: $secondaryColor;
+                    text-transform: uppercase;
+                    font-size: 5rem;
+                    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+                }
+            }
+        }
+
+    }
+}

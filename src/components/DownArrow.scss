@@ -1,0 +1,43 @@
+@import "../Variables.scss";
+
+@keyframes bounce{
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-12px);
+    }
+}
+
+.downArrow{
+    position: fixed;
+    bottom: 2%;
+    width: 100vw;
+    animation: bounce 2s infinite;
+    
+    div{
+        transform: rotate(180deg);
+        margin: 0 auto;
+        background-color: rgba(236, 235, 235, 0.3);
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: grid;
+        
+        p{
+            place-self: center;
+            @include byebyeMargin;
+            font-size: 2rem;
+            line-height: 1rem;
+            color: $secondaryColor;
+        }
+    }
+
+}

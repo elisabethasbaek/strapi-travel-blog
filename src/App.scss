@@ -1,0 +1,12 @@
+@import "./Variables.scss";
+
+body,
+html{
+    @include byebyeMargin;
+    font-family: $primaryFont;
+}
+
+.app{
+    background-color: rgb(19, 19, 19);
+    @include byebyeMargin;
+}
