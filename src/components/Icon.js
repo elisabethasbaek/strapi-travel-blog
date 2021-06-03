@@ -2,6 +2,7 @@ import "./Icon.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {Link} from "@reach/router";
+//import anime from "animejs/lib/anime.es.js";
 
 export default function Icon(){
     var [icon, setIcon] = useState([]);
@@ -13,7 +14,7 @@ export default function Icon(){
                     setIcon(response.data);
                     /* console.log(response.data) */
                 })
-            }, [setIcon]);
+        }, [setIcon]);    
 
     return(
         <Link to="/" className="icon">
@@ -21,3 +22,5 @@ export default function Icon(){
         </Link>
     )
 }
+
+//to do: disappear on scroll

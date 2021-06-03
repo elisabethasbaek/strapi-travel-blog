@@ -18,6 +18,19 @@
             height: 0.15rem;
             margin: 0.5rem 0;
         }
-    }
-    
+    }   
+}
+
+.burger__overlay{
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    -background-color: rgba(19, 19, 19, 0.3);
+    background-color: rgba(236, 235, 235, 0.1);
 }

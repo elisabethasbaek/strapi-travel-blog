@@ -1,6 +1,6 @@
 import anime from "animejs/lib/anime.es.js";
 import "./Burger.scss";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import Nav from "./Nav";
 
 export default function Burger() {
@@ -12,6 +12,13 @@ export default function Burger() {
         if(content === false){
             anime({
                 targets: ".nav",
+                easing: "linear",
+                duration: 300,
+                opacity: 1
+            })
+
+            anime({
+                targets: ".burger__overlay",
                 easing: "linear",
                 duration: 300,
                 opacity: 1
@@ -54,6 +61,13 @@ export default function Burger() {
             })
 
             anime({
+                targets: ".burger__overlay",
+                easing: "linear",
+                duration: 300,
+                opacity: 0
+            })
+
+            anime({
                 targets: ".burger__lineOne",
                 easing: "linear",
                 duration: 300,
@@ -90,6 +104,7 @@ export default function Burger() {
             </button>
 
             <Nav />
+            <div className="burger__overlay"></div>
         </section>
     );
 }

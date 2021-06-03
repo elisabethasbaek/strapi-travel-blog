@@ -16,13 +16,26 @@
 
     >ul{
         list-style: none;
+        @include byebyeMargin;
+        padding: 4rem 2rem;
+        text-align: end;
 
         >li{
+            padding-bottom: 1.5rem;
+
             .category{
                 color: $secondaryColor;
                 text-decoration: none;
                 text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                &:hover{
+                    padding-right: 20%;
+                    font-weight: 700;
+                }
             }
+
         }
     }
 }
