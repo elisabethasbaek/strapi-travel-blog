@@ -5,6 +5,7 @@ import Nav from "./Nav";
 
 export default function Burger() {
     var [content, setContent] = useState(false);
+
     
     function change(){
         setContent(!content);
@@ -13,15 +14,9 @@ export default function Burger() {
             anime({
                 targets: ".nav",
                 easing: "linear",
-                duration: 300,
-                opacity: 1
-            })
-
-            anime({
-                targets: ".burger__overlay",
-                easing: "linear",
-                duration: 300,
-                opacity: 1
+                duration: 450,
+                opacity: 1,
+                translateX: 0
             })
 
             anime({
@@ -56,15 +51,9 @@ export default function Burger() {
             anime({
                 targets: ".nav",
                 easing: "linear",
-                duration: 300,
-                opacity: 0
-            })
-
-            anime({
-                targets: ".burger__overlay",
-                easing: "linear",
-                duration: 300,
-                opacity: 0
+                duration: 700,
+                opacity: 0,
+                translateX: "100rem"
             })
 
             anime({
@@ -73,7 +62,7 @@ export default function Burger() {
                 duration: 300,
                 rotate: 0,
                 translateY: 0,
-                translateX: 0,
+                translateX: 0
             })
     
             anime({
@@ -104,7 +93,6 @@ export default function Burger() {
             </button>
 
             <Nav />
-            <div className="burger__overlay"></div>
         </section>
     );
 }

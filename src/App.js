@@ -8,7 +8,7 @@ export default function App() {
         <div className="app">
             <Router>
                 <Articles default />
-                <SingleArticle path="/articels/:id" />
+                <SingleArticle path="/Articels/:id" />
             </Router>
         </div>
     );

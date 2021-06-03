@@ -13,7 +13,7 @@ export default function Nav(){
                     setContent(response.data);
                     /* console.log(response.data); */
                 })
-        }, [setContent]);
+        }, [setContent]); 
 
     return(
         <nav className="nav">
