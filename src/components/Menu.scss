@@ -7,25 +7,15 @@
     height: 10vh;
     width: 100%;
 
-    ul{
+    &__ul{
         @include byebyeMargin;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         padding: 0.5rem;
+        list-style: none;
 
-        li{
-            list-style: none;
-
-            &:nth-of-type(2){
-                justify-self: end;
-            }
-
-            .link{
-                text-decoration: none;
-                color: $secondaryColor;
-                text-transform: uppercase;
-            }
+        &__li{
         }
     }
 }

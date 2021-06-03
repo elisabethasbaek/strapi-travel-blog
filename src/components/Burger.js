@@ -1,14 +1,22 @@
 import anime from "animejs/lib/anime.es.js";
 import "./Burger.scss";
 import {useState, useEffect} from "react";
+import Nav from "./Nav";
 
 export default function Burger() {
     var [content, setContent] = useState(false);
-
+    
     function change(){
         setContent(!content);
 
         if(content === false){
+            anime({
+                targets: ".nav",
+                easing: "linear",
+                duration: 300,
+                opacity: 1
+            })
+
             anime({
                 targets: ".burger__lineOne",
                 easing: "linear",
@@ -34,9 +42,17 @@ export default function Burger() {
                 translateX: -7.5,
                 translateY: -7.5,
             })
+
         }
 
         if(content === true){
+            anime({
+                targets: ".nav",
+                easing: "linear",
+                duration: 300,
+                opacity: 0
+            })
+
             anime({
                 targets: ".burger__lineOne",
                 easing: "linear",
@@ -66,12 +82,14 @@ export default function Burger() {
     }
         
     return (
-        <section className="overBurger">
-            <button className="burger" onClick={() => change()}>
+        <section className="overBurger" onClick={() => change()}>
+            <button className="burger">
                 <div className="burger__lineOne"></div>
                 <div className="burger__lineTwo"></div>
                 <div className="burger__lineThree"></div>
             </button>
+
+            <Nav />
         </section>
     );
 }
