@@ -41,3 +41,25 @@
         }
     }
 }
+
+@media screen and (max-width: 950px){
+    .nav{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width:700px){
+    .nav{
+        width: 50vw;
+        height: 70vh;
+
+        ul{
+            li{
+                .all,
+                .category{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

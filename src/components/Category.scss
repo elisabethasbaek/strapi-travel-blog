@@ -69,3 +69,47 @@
 
     }
 }
+
+@media screen and (max-width: 650px){
+    .category{
+        .oneCategory{
+            &__image{
+                &--one{
+                    display: none;
+                 }
+                 
+                &--two{
+                    display: none;
+                }
+                
+                &--three{
+                    width: 100%;
+                    height: 100vh;
+                }   
+            }
+
+            &__text{
+                max-width: 80vw;
+                word-break: break-word;
+
+                .heading{
+                    place-self: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .category{
+        .oneCategory{
+            &__text{
+                .heading{
+                    &__link{
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}

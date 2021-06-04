@@ -25,7 +25,7 @@ export default function Categories(){
                 return(
                     <Link to={"/Categories/" + category.id} className="categories__container">
                         <img alt={category.kategorinavn} src={"http://localhost:1337" + category.image?.url} className="image"/>
-                        <p className="category">{category.kategorinavn}</p>
+                        <p className="oneCategory">{category.kategorinavn}</p>
                     </Link>
                 )
             })}
@@ -33,7 +33,7 @@ export default function Categories(){
                 return(
                     <Link to={"/Categories/" + category.id} className="categories__container">
                         <img alt={category.kategorinavn} src={"http://localhost:1337" + category.image?.url} className="image"/>
-                        <p className="category">{category.kategorinavn}</p>
+                        <p className="oneCategory">{category.kategorinavn}</p>
                     </Link>
                 )
             })}
