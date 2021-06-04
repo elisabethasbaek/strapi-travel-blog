@@ -1,7 +1,7 @@
 import "./SingleArticle.scss";
+import Menu from "./Menu";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Menu from "./Menu";
 import {Link} from "@reach/router";
 
 export default function SingleArticle(props){

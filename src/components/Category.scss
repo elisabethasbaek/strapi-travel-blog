@@ -1,13 +1,13 @@
 @import "../Variables.scss";
 
-.articles{
+.category{
     @include byebyeMargin;
     scroll-snap-type:  y  mandatory;
     scroll-snap-align: center;
     overflow-y:  scroll;
     height: 100vh;
     
-    .oneArticle{
+    .oneCategory{
         display: grid;
         scroll-snap-align:  center;
 

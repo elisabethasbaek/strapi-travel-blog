@@ -18,10 +18,11 @@ export default function Nav(){
     return(
         <nav className="nav">
             <ul>
+                <li><Link to="/Categories" className="all">All categories</Link></li>
                 {content.map(function(single){
                     return(
                         <li>
-                            <Link className="category" to={"http://localhost:1337/Categories/" + single.id}>{single.kategorinavn}</Link>
+                            <Link className="category" to={"/Categories/" + single.id}>{single.kategorinavn}</Link>
                         </li>
                     )
                 })}
